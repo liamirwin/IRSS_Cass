@@ -1,8 +1,7 @@
 # IRSS_Cass
 
 <p align="center">
-  <img src="docs/irss_logo.png" alt="UBC - Integrated Remote Sensing Studio" width="200"/>
-  <img src="docs/uc_logo.png" alt="University of Canterbury" width="200"/>
+  <img src="docs/overview_photo.png" alt="UBC - Integrated Remote Sensing Studio" width="1200"/>
 </p>
 
 This repository contains code and products for a remote sensing assessment of Cass, New Zealand, a unique beech forest located in the Southern Alps mountain range. The project is a collaboration between researchers at the University of British Columbia's Integrated Remote Sensing Studio (IRSS) and the University of Canterbury in Christchurch, New Zealand.
