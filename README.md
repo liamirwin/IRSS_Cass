@@ -16,13 +16,13 @@ The goal of this project is to assess the structural diversity of beech forest c
 1. **DJI Matrice 300 RTK Drone Data**: High-resolution drone data collected using the following sensors:
     - Zenmuse L1 lidar: Provides accurate 3D point cloud data for analyzing forest structure
     - P1 RGB sensor: Captures high-resolution RGB images for visual analysis and classification
-    - H20t thermal sensor: Measures temperature variations across the forest, which can provide insights into plant health and stress levels
+    - H20t thermal sensor: Measures temperature variations across the forest, which can provide insights into plant health and stress levels, and thermal dynamics
 
 2. **Historical Aerial Imagery**: Aerial photographs from 2006 (0.75m resolution) and 2016 (0.30m resolution) to assess changes in the forest's structure and expansion over time.
 
 ## Methodology
 
-1. **Forest Structure Analysis**: Using lidar point cloud data and a suite of available lidar metrics from the [lidRmetrics GitHub page](https://github.com/ptompalski/lidRmetrics), we analyze the vertical and horizontal structure of the beech forest clusters. Metrics such as canopy height, canopy cover, and tree density are derived from the data.
+1. **Forest Structure Analysis**: Using lidar point cloud data and a suite of available lidar metrics from the [lidRmetrics](https://github.com/ptompalski/lidRmetrics), we analyze the vertical and horizontal structure of the beech forest clusters.
 
 2. **Change Detection**: By comparing historical aerial imagery with recent drone data, we assess the expansion and growth of beech forest clusters over time. We employ various change detection techniques, including image differencing, classification comparison, and object-based analysis.
 
@@ -43,13 +43,14 @@ The goal of this project is to assess the structural diversity of beech forest c
 4. Visualize the results using the scripts in the `results/` directory.
 
 ## Study Area
+
 ```R
 # Load required packages
 library(sf)
 library(leaflet)
 
 # Read the GeoPackage containing the study area boundary
-study_area_boundary <- st_read("path/to/study_area_boundary.gpkg")
+study_area_boundary <- st_read("data/beech_extent.gpkg")
 
 # Create an interactive map
 leaflet(study_area_boundary) %>%
@@ -57,3 +58,9 @@ leaflet(study_area_boundary) %>%
   addPolygons(fillColor = "#74a9cf", stroke = TRUE, color = "#045a8d", weight = 2, opacity = 1, fillOpacity = 0.5)
 
 ```
+
+## Structural Metrics
+
+<p align="center">
+  <img src="results/Metric_generation_time.png" alt="Time taken to generate pixel metrics" width="200"/>
+</p>
