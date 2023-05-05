@@ -1,0 +1,42 @@
+---
+title: "study_map"
+author: "Liam Irwin"
+date: "2023-05-05"
+output: 
+  md_document:
+    variant: gfm
+    preserve_yaml: true
+always_allow_html: true    
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+# Load required libraries
+library(leaflet)
+library(sf)
+library(rgdal)
+```
+
+```{r}
+# Read study area polygon
+study_area <- st_read("data/_vector/Beech_mask.shp") %>% st_transform(4326)
+
+# Create the leaflet map
+mymap <- leaflet(study_area) %>%
+  addTiles() %>%
+  addPolygons(fillColor = "blue",
+              color = "black",
+              weight = 1,
+              opacity = 1,
+              fillOpacity = 0.1,
+              smoothFactor = 1)
+  
+mymap
+
+```
+
+
