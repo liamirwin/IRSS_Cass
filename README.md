@@ -1,5 +1,14 @@
 # IRSS_Cass
 
+<script src="https://rstudio.github.io/leaflet/libs/jquery/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="https://rstudio.github.io/leaflet/libs/bootstrap/css/flatly.min.css" rel="stylesheet" />
+...
+<link href="https://rstudio.github.io/leaflet/libs/rstudio_leaflet/rstudio_leaflet.css" rel="stylesheet" />
+<script src= "https://rstudio.github.io/leaflet/libs/leaflet-binding/leaflet.js"></script>
+
+
+
 <p align="center">
   <img src="docs/overview_photo.png" alt="UBC - Integrated Remote Sensing Studio" width="1200"/>
 </p>
@@ -25,38 +34,14 @@ The goal of this project is to assess the structural diversity of beech forest c
 
 2. **Change Detection**: By comparing historical aerial imagery with recent drone data, we assess the expansion and growth of beech forest clusters over time. We employ various change detection techniques, including image differencing, classification comparison, and object-based analysis.
 
-3. **Data Visualization**: Results are visualized using maps, graphs, and other visual aids to effectively communicate our findings.
+3. **Data Visualization**: Results are visualized using maps, graphs, and statistical analyses of variance
 
 ## Repository Structure
 
-- `data/`: Contains raw and processed data files, including drone data and historical aerial imagery
+- `data/`: Contains raw and processed data files, excluding drone data and historical aerial imagery which are too large for repository
 - `src/`: Contains source code for data preprocessing, analysis, and visualization
-- `results/`: Contains output files, such as maps, graphs, and tables, generated from the analysis
-- `docs/`: Contains project documentation, including reports and presentations
-
-## Getting Started
-
-1. Clone this repository to your local machine.
-2. Install required dependencies.
-3. Run the scripts in the `src/` directory to preprocess the data and perform the analysis.
-4. Visualize the results using the scripts in the `results/` directory.
-
-## Study Area
-
-```R
-# Load required packages
-library(sf)
-library(leaflet)
-
-# Read the GeoPackage containing the study area boundary
-study_area_boundary <- st_read("data/beech_extent.gpkg")
-
-# Create an interactive map
-leaflet(study_area_boundary) %>%
-  addTiles() %>%
-  addPolygons(fillColor = "#74a9cf", stroke = TRUE, color = "#045a8d", weight = 2, opacity = 1, fillOpacity = 0.5)
-
-```
+- `results/`: Contains output files; maps, graphs, and tables, generated from the analysis
+- `docs/`: Contains project documentation
 
 ## Structural Metrics
 
