@@ -62,5 +62,5 @@ leaflet(study_area_boundary) %>%
 ## Structural Metrics
 
 <p align="center">
-  <img src="results/Metric_generation_time.png" alt="Time taken to generate pixel metrics" width="200"/>
+  <img src="results/Metric_generation_time.png" alt="Time taken to generate pixel metrics" width="1200"/>
 </p>
