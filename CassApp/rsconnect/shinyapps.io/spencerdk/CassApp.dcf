@@ -1,0 +1,13 @@
+name: CassApp
+title: CassApp
+username:
+account: spencerdk
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 9013796
+bundleId: 7170161
+url: https://spencerdk.shinyapps.io/CassApp/
+when: 1683137122.93665
+lastSyncTime: 1683137122.93666
+asMultiple: FALSE
+asStatic: FALSE
